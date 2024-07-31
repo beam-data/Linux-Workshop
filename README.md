@@ -308,7 +308,7 @@ $ ls -l /home/deveplopment
 
 ```bash
 $ chmod 400 ~/toolbox
-$ ls -l /home/deveplopment
+$ ls -l /home/ubuntu
 ```
 
 <img src="https://s3.amazonaws.com/weclouddata/images/data_engineer/david_linux/command_7.png" width="30%">     
@@ -561,10 +561,10 @@ $ ls -l /home/ubuntu/toolbox/testfile.txt
 
 How to interpret file permission?  
 
-- This file is owned by `development`
+- This file is owned by `ubuntu`
 - The superuser has the right to read, write this file
-- The file is owned by the group `development`
-- Members of the group `development` can also read and write this file
+- The file is owned by the group `ubuntu`
+- Members of the group `ubuntu` can also read and write this file
 - Everybody else can ONLY read this file	
 
 ##### #Understanding permissions
@@ -591,7 +591,7 @@ It is easy to think of the permission settings as a series of bits (which is how
 ##### #Change the permission of a file so that only the owner can read and write the file
 
 ```bash
-$ su development
+$ su ubuntu
 $ chmod 600 /home/ubuntu/toolbox/testfile_1.txt
 ```
 
