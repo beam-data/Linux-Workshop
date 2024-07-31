@@ -119,12 +119,6 @@ $ type pwd
 $ type -a date
 ```
 
-##### #Read and print first 3 lines
-
-```bash
-$ head -n 3 ~/.bash_history
-```
-
 ##### #Get help on a command
 
   - type `q` to quit the help screen
@@ -133,7 +127,7 @@ $ head -n 3 ~/.bash_history
 
     ```bash
     $ man date
-    $ help grep
+    $ help date
     ```
 
     ​	
@@ -340,10 +334,10 @@ $ rm -r ~/tmp-folder
 ##### #Read and print a file to screen with `cat`
 
 ```bash
-$ cat /usr/lib/python3/dist-packages/uno.py | head
-$ cat /usr/lib/python3/dist-packages/uno.py | tail
-$ cat /usr/lib/python3/dist-packages/uno.py | less
-$ cat /usr/lib/python3/dist-packages/uno.py | head -n 5
+$ cat /usr/lib/python3/dist-packages/six.py | head
+$ cat /usr/lib/python3/dist-packages/six.py | tail
+$ cat /usr/lib/python3/dist-packages/six.py | less
+$ cat /usr/lib/python3/dist-packages/six.py | head -n 5
 ```
 
 For the `less` command, you need to use up and down arrow keys to scroll the content, and type `q` to close.
@@ -351,8 +345,8 @@ For the `less` command, you need to use up and down arrow keys to scroll the con
 ##### #Read and print a file with `head`, `tail`, `less`, `more`
 
 ```bash
-$ head /usr/lib/python3/dist-packages/uno.py
-$ tail /usr/lib/python3/dist-packages/uno.py
+$ head /usr/lib/python3/dist-packages/six.py
+$ tail /usr/lib/python3/dist-packages/six.py
 ```
 
 <img src="https://s3.amazonaws.com/weclouddata/images/data_engineer/david_linux/command_10.png" width="30%">
