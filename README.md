@@ -6,8 +6,8 @@ Setting up a Linux Environment
 1. Download Multipass by following the instructions on the [website](https://multipass.run/install).
 2. Open a terminal and type the following command to create a new Ubuntu instance:
     ```bash
-    multipass launch --name development
-    multipass shell development
+    multipass launch --name my-vm
+    multipass shell my-vm
     ```
     This will create a new Ubuntu instance and open a shell in that instance.
 
@@ -68,7 +68,7 @@ Type the following in your terminal (without the dollar sign) and press `<Enter>
 
 ```bash
 $ pwd
-/home/development
+/home/ubuntu
 ```
 
 The command-line tool `pwd` prints the name of the directory where you currently are. By default, when you log in, this is your home directory (`~`)
@@ -159,7 +159,7 @@ $ seq 100 | grep 3 | wc -l
 By default, the output of the command-line tool in the pipeline is outputted to the `terminal`. You can also save this output to a `file`.
 
 ```bash
-$ seq 3 > /home/development/seq_out
+$ seq 3 > /home/ubuntu/seq_out
 $ cat seq_out
 ```
 
@@ -170,7 +170,7 @@ $ cat seq_out
 `>` will overwrite the file if it already exists
 
 ```bash
-$ seq 5 > /home/development/seq_out
+$ seq 5 > /home/ubuntu/seq_out
 $ cat seq_out
 ```
 
@@ -183,7 +183,7 @@ $ cat seq_out
 `>>` will append data to the existing file
 
 ```bash
-$ seq 5 >> /home/development/seq_out
+$ seq 5 >> /home/ubuntu/seq_out
 $ cat seq_out
 ```
 
@@ -381,7 +381,7 @@ The default editor that comes with the UNIX operating system is called vi (visua
 
    ```bash
    $ mkdir toolbox
-   $ echo "Linux is an essential skill a data scientist must master!" > /home/development/toolbox/testfile.txt
+   $ echo "Linux is an essential skill a data scientist must master!" > /home/ubuntu/toolbox/testfile.txt
    $ cat ~/toolbox/testfile.txt
    ```
 
@@ -424,7 +424,7 @@ The default editor that comes with the UNIX operating system is called vi (visua
   Note: you get long list of results because `find` is trying to match string "testfile.txt" against full path
 
   ```bash
-  $ find /home/development/toolbox/testfile.txt | grep testfile.txt
+  $ find /home/ubuntu/toolbox/testfile.txt | grep testfile.txt
   ```
 
   <img src="https://s3.amazonaws.com/weclouddata/images/data_engineer/david_linux/command_13.png" width="30%"> 
@@ -441,13 +441,13 @@ The default editor that comes with the UNIX operating system is called vi (visua
 - Copy a file to a new folder
 
   ```bash
-  $ cp /home/development/toolbox/testfile.txt /home/development/
+  $ cp /home/ubuntu/toolbox/testfile.txt /home/ubuntu/
   ```
 
 - Move a file to a different folder
 
   ```bash
-  $ mv /home/development/testfile.txt /home/development/testfile_copy.txt
+  $ mv /home/ubuntu/testfile.txt /home/ubuntu/testfile_copy.txt
   ```
 
   
@@ -455,7 +455,7 @@ The default editor that comes with the UNIX operating system is called vi (visua
 ##### Rename a file (using `mv`)
 
 ```bash
-$ mv /home/development/toolbox/testfile.txt /home/development/toolbox/testfile_1.txt
+$ mv /home/ubuntu/toolbox/testfile.txt /home/ubuntu/toolbox/testfile_1.txt
 ```
 
 
@@ -554,7 +554,7 @@ Linux is a multi-user system which means that multiple users can access the same
 ##### #View file permissions
 
 ```bash
-$ ls -l /home/development/toolbox/testfile.txt
+$ ls -l /home/ubuntu/toolbox/testfile.txt
 ```
 
 <img src="https://s3.amazonaws.com/weclouddata/images/data_engineer/david_linux/command_16.png" width="30%"> 
@@ -592,14 +592,14 @@ It is easy to think of the permission settings as a series of bits (which is how
 
 ```bash
 $ su development
-$ chmod 600 /home/development/toolbox/testfile_1.txt
+$ chmod 600 /home/ubuntu/toolbox/testfile_1.txt
 ```
 
 Test by accessing this file from a different user account
 
 ```bash
 $ su testuser
-$ cat /home/development/toolbox/testfile_1.txt
+$ cat /home/ubuntu/toolbox/testfile_1.txt
 ```
 
 <img src="https://s3.amazonaws.com/weclouddata/images/data_engineer/david_linux/command_17.png" width="30%">
@@ -612,8 +612,8 @@ $ cat /home/development/toolbox/testfile_1.txt
 
 ```bash
 $ exit
-$ sudo chown testuser /home/development/toolbox/testfile_1.txt
-$ ls -l /home/development/toolbox/testfile_1.txt
+$ sudo chown testuser /home/ubuntu/toolbox/testfile_1.txt
+$ ls -l /home/ubuntu/toolbox/testfile_1.txt
 ```
 
 <img src="https://s3.amazonaws.com/weclouddata/images/data_engineer/david_linux/command_18.png" width="30%"> 
@@ -621,7 +621,7 @@ $ ls -l /home/development/toolbox/testfile_1.txt
 #### 3.8.4 Change the file group ownership (`chgrp`)
 
 ```bash
-$ sudo chgrp testuser /home/development/toolbox/testfile_1.txt
+$ sudo chgrp testuser /home/ubuntu/toolbox/testfile_1.txt
 ```
 
 
