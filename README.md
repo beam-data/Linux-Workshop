@@ -6,8 +6,8 @@ Setting up a Linux Environment
 1. Download Multipass by following the instructions on the [website](https://multipass.run/install).
 2. Open a terminal and type the following command to create a new Ubuntu instance:
     ```bash
-    multipass launch --name my-vm
-    multipass shell my-vm
+    multipass launch --name development
+    multipass shell development
     ```
     This will create a new Ubuntu instance and open a shell in that instance.
 
@@ -80,7 +80,7 @@ The command-line tool `pwd` prints the name of the directory where you currently
 ```bash
 $ cd ~
 $ cd /usr/lib/python3
-$ cd /home/development
+$ cd ~
 ```
 
 ##### #list a directory
@@ -116,13 +116,13 @@ $ type pwd
 ##### #Check the type of a command
 
 ```bash
-$ type -a awk
+$ type -a date
 ```
 
 ##### #Read and print first 3 lines
 
 ```bash
-$ head -n 3 wordcount.py
+$ head -n 3 ~/.bash_history
 ```
 
 ##### #Get help on a command
@@ -132,7 +132,7 @@ $ head -n 3 wordcount.py
   - if `man` is not supported in your os, try `help`  
 
     ```bash
-    $ man awk
+    $ man date
     $ help grep
     ```
 
